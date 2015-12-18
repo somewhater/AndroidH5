@@ -9,40 +9,36 @@ import android.widget.Button;
 
 
 public class MainActivity extends Activity {
+    private Button btn_one, btn_two, btn_three, btn_four;
 
-    @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        Button btn_one = (Button) findViewById(R.id.btn_one);
-        Button btn_two = (Button) findViewById(R.id.btn_two);
-        Button btn_three = (Button) findViewById(R.id.btn_three);
-        Button btn_four = (Button) findViewById(R.id.btn_four);
+        btn_one = (Button) findViewById(R.id.btn_one);
+        btn_two = (Button) findViewById(R.id.btn_two);
+        btn_three = (Button) findViewById(R.id.btn_three);
+        btn_four = (Button) findViewById(R.id.btn_four);
         btn_one.setOnClickListener(new View.OnClickListener() {
-            @Override
             public void onClick(View v) {
-                Fragment_one fragment_one = new Fragment_one();
+                Fragment_one fragment_one = Singleton.getOne();
                 getFragmentManager().beginTransaction().replace(R.id.top_layout, fragment_one).commit();
             }
         });
         btn_two.setOnClickListener(new View.OnClickListener() {
-            @Override
             public void onClick(View v) {
-                Fragment_two fragment_two = new Fragment_two();
+                Fragment_two fragment_two = Singleton.getTwo();
                 getFragmentManager().beginTransaction().replace(R.id.top_layout, fragment_two).commit();
             }
         });
         btn_three.setOnClickListener(new View.OnClickListener() {
-            @Override
             public void onClick(View v) {
-                Fragment_three fragment_three = new Fragment_three();
+                Fragment_three fragment_three = Singleton.getThree();
                 getFragmentManager().beginTransaction().replace(R.id.top_layout, fragment_three).commit();
             }
         });
         btn_four.setOnClickListener(new View.OnClickListener() {
-            @Override
             public void onClick(View v) {
-                Fragment_four fragment_four = new Fragment_four();
+                Fragment_four fragment_four = Singleton.getFour();
                 getFragmentManager().beginTransaction().replace(R.id.top_layout, fragment_four).commit();
             }
         });
