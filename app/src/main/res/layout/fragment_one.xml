@@ -7,6 +7,7 @@
         android:layout_height="wrap_content"
         android:text="@string/fragment_one"
         android:textColor="#000000"
-        android:textSize="25sp"/>
+        android:textSize="25sp"
+        android:id="@+id/fragment_one" />
 
 </LinearLayout>
