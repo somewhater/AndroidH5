@@ -3,4 +3,12 @@
 
     <string name="hello_world">Hello world!</string>
     <string name="action_settings">Settings</string>
+    <string name="btn_one">一</string>
+    <string name="btn_two">二</string>
+    <string name="btn_three">三</string>
+    <string name="bth_four">四</string>
+    <string name="fragment_one">This is fragment 1</string>
+    <string name="fragment_two">This is fragment 2</string>
+    <string name="fragment_three">This is fragment 3</string>
+    <string name="fragment_four">This is fragment 4</string>
 </resources>
